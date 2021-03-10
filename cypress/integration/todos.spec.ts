@@ -1,8 +1,8 @@
 describe('Todos', () => {
 
     beforeEach(() => {
-        cy.intercept('GET', 'http://localhost:3000/todos', { fixture: 'get-todos.json' });
-        cy.intercept('POST', 'http://localhost:3000/todos', { id: 'XXX', description: 'But what about that beer?' })
+        cy.intercept('GET', 'http://NOT_REALLY_SET/todos', { fixture: 'get-todos.json' });
+        cy.intercept('POST', 'http://NOT_REALLY_SET/todos', { id: 'XXX', description: 'But what about that beer?' })
         cy.visit('');
         cy.get('[data-t-routing-todos]').click();
     })
